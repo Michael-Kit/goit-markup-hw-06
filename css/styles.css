@@ -434,8 +434,6 @@ button {
   .main-title {
     font-size: 56px;
     line-height: 1.07;
-    letter-spacing: 0.02em;
-    color: #fff;
     max-width: 496px;
     margin-bottom: 36px;
   }
@@ -521,14 +519,6 @@ button {
 
   .feature-item-title {
     text-align: left;
-    margin-bottom: 8px;
-  }
-
-  .feature-description {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
   }
 }
 
@@ -538,13 +528,17 @@ button {
   }
 
   .features-list {
-    flex-direction: row;
-    flex-wrap: wrap;
     gap: 24px;
   }
   .feature-item {
     flex-basis: calc((100% - 3 * 24px) / 4);
   }
+  .feature-item-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
   .feature-icon-block {
     display: flex;
     margin-bottom: 16px;
