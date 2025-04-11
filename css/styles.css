@@ -519,13 +519,6 @@ button {
     flex-basis: calc((100% - 1 * 24px) / 2);
   }
 
-  .features-section-title {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2e2f42;
-  }
-
   .feature-item-title {
     text-align: left;
     margin-bottom: 8px;
