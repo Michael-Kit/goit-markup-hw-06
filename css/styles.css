@@ -1082,10 +1082,10 @@ button {
     color: #ffffff;
     font-size: 12px;
   }
-  .footer-form .footer-form-input:focus {
+  /* .footer-form .footer-form-input:focus {
     background-color: transparent; /* прибираємо синій фон */
   }
-/* 
+/*  */
   .fotter-btn-subscribe {
     align-items: center;
     border-radius: 4px;
@@ -1114,4 +1114,4 @@ button {
     height: 24px;
     margin-left: 16px;
   }
-} */
+} 
