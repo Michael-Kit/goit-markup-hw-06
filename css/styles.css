@@ -738,14 +738,14 @@ button {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
+  gap: 48px 24px;
   padding: 0;
   list-style: none;
 }
 
 .portfolio-card {
   position: relative;
-  gap: 48;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -755,7 +755,6 @@ button {
   border: 1px solid #e7e9fc;
   border-top: none;
   background: #fff;
-  margin-bottom: 48px;
 }
 
 .portfolio-card-title {
@@ -779,7 +778,13 @@ button {
   .portfolio-card {
     width: calc((100% - 1 * 24px) / 2);
   }
+
+  .portfolio-item-picture-wrap {
+    width: 360px;
+    height: 300px;
+  }
 }
+/* desctop */
 
 @media screen and (min-width: 1158px) {
   .portfolio-section {
@@ -788,15 +793,12 @@ button {
   }
 
   .portfolio-card {
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - 2 * 24px) / 3);
     position: relative;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /* Плавний перехід для тіней */
   }
 
-  .portfolio-card:hover .portfolio-item-text {
-    transform: translate(0);
-  }
   .portfolio-card:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -805,7 +807,7 @@ button {
 }
 
 /* footer */
-
+/* mobile first */
 .page-footer {
   background-color: #2e2f42;
   padding: 96px 0;
@@ -819,7 +821,6 @@ button {
 
 .footer-logo {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: center;
   margin-bottom: 16px;
 }
@@ -849,8 +850,6 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
-  /* padding: 0; */
-  /* list-style: none; */
   margin-bottom: 72px;
   max-width: 288px;
   margin-left: 40px;
@@ -876,8 +875,7 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-socmedia-block-soclinks a.circle:hover,
-.footer-socmedia-block-soclinks a.circle:focus {
+.footer-socmedia-block-soclinks a.circle:active {
   background-color: #31d0aa;
 }
 
@@ -904,7 +902,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px; /* Відступ між полем вводу та кнопкою */
 }
 
@@ -923,14 +921,6 @@ button {
   background-color: transparent;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 8px 16px;
-}
-
-.footer-form-input::placeholder {
-  color: #ffffff;
-  font-size: 12px;
-}
-.footer-form .footer-form-input:focus {
-  background-color: transparent; /* прибираємо синій фон */
 }
 
 .footer-btn-subscribe {
@@ -953,7 +943,7 @@ button {
   margin: auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-btn-subscribe:hover {
+.footer-btn-subscribe:active {
   background-color: #31d0aa;
 }
 .footer-icon {
@@ -962,11 +952,81 @@ button {
   height: 24px;
   margin-left: 16px;
 }
+
+/* tablet */
+
 @media screen and (min-width: 768px) {
+  .footer-container {
+    padding-left: 108px;
+  }
+  .footer-logo {
+    display: inline-block;
+  }
+  .text-block {
+    margin-bottom: 0;
+  }
+
+  .footer-text {
+    max-width: 264px;
+  }
+
+  .social-media {
+    margin-left: 24px;
+    margin-bottom: 16px;
+  }
+
+  .footer-socmedia-block {
+    margin-left: 24px;
+    margin-right: 0;
+  }
+
+  .footer-form-block {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .subscribe-text {
+    display: inline-block;
+    max-width: 264px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  .footer-form {
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-form-input {
+    width: 264px;
+  }
+
+  .footer-form-input::placeholder {
+    color: #ffffff;
+    font-size: 12px;
+  }
+  .footer-form .footer-form-input:focus {
+    background-color: transparent; /* прибираємо синій фон */
+  }
 }
+
+/* desctop */
 
 @media screen and (min-width: 1158px) {
   .page-footer {
     padding: 100px 0;
   }
 }
+
+.footer-container {
+  padding-left: 0;
+}
+
+/* .text-block {
+  margin-right: 120px;
+} */
