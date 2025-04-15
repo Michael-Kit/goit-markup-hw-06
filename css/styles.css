@@ -382,7 +382,16 @@ button {
   margin: 0 auto;
 }
 
-@media screen and(min-resolution: 2dppx),
+@media screen and (min-width: 320px) {
+  .hero {
+    background-size: contain;
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-resolution: 2dppx),
   (min-resolution: 192dpi),
   (-webkit-min-device-pixel-ration: 2) {
   .hero {
@@ -440,9 +449,11 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero-x/hero-tab-min.jpg);
+
+    max-width: 768px;
   }
 
-  @media screen and(min-resolution: 2dppx),
+  @media screen and (min-resolution: 2dppx),
     (min-resolution: 192dpi),
     (-webkit-min-device-pixel-ration: 2) {
     .hero {
@@ -473,7 +484,7 @@ button {
       url(../images/hero-x/hero-desk-min.jpg);
   }
 
-  @media screen and(min-resolution: 2dppx),
+  @media screen and (min-resolution: 2dppx),
     (min-resolution: 192dpi),
     (-webkit-min-device-pixel-ration: 2) {
     .hero {
