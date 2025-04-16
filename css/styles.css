@@ -407,7 +407,7 @@ button {
 
 @media screen and (min-width: 320px) {
   .hero {
-    background-size: contain;
+    /* background-size: contain; */
     width: 100%;
     height: auto;
     max-width: 320px;
@@ -772,8 +772,6 @@ button {
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
-  width: 288px;
-  height: 280px;
 }
 /* poops up text */
 .portfolio-item-text {
@@ -847,11 +845,6 @@ button {
 @media screen and (min-width: 768px) {
   .portfolio-card {
     width: calc((100% - 1 * 24px) / 2);
-  }
-
-  .portfolio-item-picture-wrap {
-    width: 360px;
-    height: 300px;
   }
 
   .portfolio-list {
@@ -1181,7 +1174,7 @@ button {
 }
 
 .modal-close-btn:hover,
-:focus {
+.modal-close-btn::focus {
   background-color: #404bbf;
   /* Зміна кольору фону при hover */
   border: none;
